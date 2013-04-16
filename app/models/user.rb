@@ -6,7 +6,36 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :first_name, :last_name
+
+
+  STATUSES = {:in => 0, :out => 1}.freeze
+
+  validates :status, :inclusion => {:in => STATUSES.values }
+
+  def status=(val)    
+    write_attribute(:status, STATUSES[val])
+  end
+
+  def status
+    STATUSES.values_at(read_attribute(:status, STATUSES[val.intern])).first
+  end
+
+  current_sign_in_ip, last_sign_in_ip
+  def looked_up_ip
+    ip = read_attribute(:looked_up_ip)
+    ip += 4_294_967_296 if value < 0 # Convert from 2's complement
+    return "#{(ip & 0xFF000000) >> 24}.#{(ip & 0x00FF0000) >> 16}.#{(ip & 0x0000FF00) >> 8}.#{ip & 0x000000FF}"
+  end
+
+  def looked_up_ip=(value)
+    quads = value.split('.')
+    raise "Invalid IP address: #{as_string}" unless quads.length == 4
+    
+    as_int = (quads[0].to_i * 16777216) + (quads[1].to_i * 65536) + (quads[2].to_i * 256) + quads[3].to_i
+    as_int -= 4_294_967_296 if as_int > 2147483647 # Convert to 2's complement
+    write_attribute(:looked_up_ip, as_int)
+  end
 
 
 end
