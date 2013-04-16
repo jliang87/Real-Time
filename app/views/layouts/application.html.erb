@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <% flash.to_hash.slice(:alert, :error, :notice).each_pair do |type, messages| %>
+    <% Array(messages).each do |m| %>
+      <p class="<%= type %>"><%= m %></p>
+    <% end %>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>

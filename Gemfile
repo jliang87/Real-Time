@@ -1,16 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2'
 
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  # Gems required for the asset pipeline
+  # If issues installing therubyracer try: "gem uninstall libv8" and uninstalling all versions
+  gem 'libv8', "~> 3.3.10"
+  gem 'therubyracer', '0.10.1', :require => 'v8'
+  gem 'execjs'
+
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
