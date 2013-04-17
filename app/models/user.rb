@@ -27,19 +27,25 @@ class User < ActiveRecord::Base
     STATUSES.key(read_attribute(:status))
   end
 
-  def looked_up_ip
-    ip = read_attribute(:looked_up_ip)
-    ip += 4_294_967_296 if value < 0 # Convert from 2's complement
-    "#{(ip & 0xFF000000) >> 24}.#{(ip & 0x00FF0000) >> 16}.#{(ip & 0x0000FF00) >> 8}.#{ip & 0x000000FF}"
-  end
+  [:current_sign_in_ip, :last_sign_in_ip].each do |field|
+    define_method(field) do
+      ip = read_attribute(field)
+      return nil unless ip
+      ip += 4_294_967_296 if ip < 0 # Convert from 2's complement
+      "#{(ip & 0xFF000000) >> 24}.#{(ip & 0x00FF0000) >> 16}.#{(ip & 0x0000FF00) >> 8}.#{ip & 0x000000FF}"
+    end
 
-  def looked_up_ip=(value)
-    quads = value.split('.')
-    raise "Invalid IP address: #{as_string}" unless quads.length == 4
-    
-    as_int = (quads[0].to_i * 16777216) + (quads[1].to_i * 65536) + (quads[2].to_i * 256) + quads[3].to_i
-    as_int -= 4_294_967_296 if as_int > 2147483647 # Convert to 2's complement
-    write_attribute(:looked_up_ip, as_int)
+    define_method("#{field}=") do |value|
+      quads = value.split('.')      
+      if quads.length == 4    
+        as_int = (quads[0].to_i * (2**24)) + (quads[1].to_i * (2**16)) + (quads[2].to_i * (2**8)) + quads[3].to_i
+        as_int -= 4_294_967_296 if as_int > 2147483647 # Convert to 2's complement
+      else
+        as_int = nil
+      end
+      write_attribute(field, as_int)      
+    end
+
   end
 
 
