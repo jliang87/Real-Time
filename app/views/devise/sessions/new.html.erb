@@ -1,14 +1,14 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "styled-form"}) do |f| %>
-  <label> Email
-    <%= f.email_field :email, :autofocus => true %>
+  <label class="styled-label"> Email
+    <%= f.email_field :email, :class => "styled-input", :autofocus => true %>
   </label>
 
-  <label> Password    
-    <%= f.password_field :password %>
+  <label class="styled-label"> Password    
+    <%= f.password_field :password, :class => "styled-input" %>
   </label>
 
   <% if devise_mapping.rememberable? -%>
-    <label> Remember Me 
+    <label class="styled-label"> Remember Me 
       <%= f.check_box :remember_me %> 
     </label>
   <% end -%>

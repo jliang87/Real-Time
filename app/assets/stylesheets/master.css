@@ -25,7 +25,7 @@
   width: 36.5384em;
 }
 
-.styled-form label {
+.styled-form .styled-label {
   display: block;
   color: #666;
   font-weight: bold;
@@ -33,7 +33,7 @@
   position: relative;
 }
 
-.styled-form label input {
+.styled-form .styled-input {
   width: 100%;
   font-size: 1em;
   line-height: 1;
