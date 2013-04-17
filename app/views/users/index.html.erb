@@ -1,1 +1,12 @@
-Index
+<p> 
+  <span class="name">My Status: </span> 
+  <span class="status status-<%= current_user.status %>"> <%= current_user.status %> </span>
+  <%= link_to "Edit", edit_user_path(current_user) %>
+</p>
+
+<% @users.each do |user| %>
+<p> 
+  <span class="name"><%= user.full_name %> </span> 
+  <span class="status status-<%= user.status %>"> <%= user.status %> </span>
+</p>
+<% end %>

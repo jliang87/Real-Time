@@ -8,24 +8,29 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :first_name, :last_name
 
+  scope :without_user, lambda {|user| where("id <> :id", :id => user.id) }
+
 
   STATUSES = {:in => 0, :out => 1}.freeze
 
-  validates :status, :inclusion => {:in => STATUSES.values }
+  validates :status, :inclusion => {:in => STATUSES.keys }
+
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 
   def status=(val)    
-    write_attribute(:status, STATUSES[val])
+    write_attribute(:status, STATUSES[val.intern])
   end
 
   def status
-    STATUSES.values_at(read_attribute(:status, STATUSES[val.intern])).first
+    STATUSES.key(read_attribute(:status))
   end
 
-  current_sign_in_ip, last_sign_in_ip
   def looked_up_ip
     ip = read_attribute(:looked_up_ip)
     ip += 4_294_967_296 if value < 0 # Convert from 2's complement
-    return "#{(ip & 0xFF000000) >> 24}.#{(ip & 0x00FF0000) >> 16}.#{(ip & 0x0000FF00) >> 8}.#{ip & 0x000000FF}"
+    "#{(ip & 0xFF000000) >> 24}.#{(ip & 0x00FF0000) >> 16}.#{(ip & 0x0000FF00) >> 8}.#{ip & 0x000000FF}"
   end
 
   def looked_up_ip=(value)

@@ -1,24 +1,15 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.without_user(current_user)
   end
   
-  def show
-  end
-
-  def new
-  end
-
   def edit
-  end
-  
-  def create
   end
 
   def update
-  end
-
-  def destroy
+    current_user.update_attributes(params[:user])
+    redirect_to users_path
   end
 
 

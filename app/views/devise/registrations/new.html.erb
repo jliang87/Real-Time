@@ -1,18 +1,27 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "styled-form"}) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <label> Email    
+    <%= f.email_field :email, :autofocus => true %>
+  </label>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <label> First Name
+    <%= f.text_field :first_name %>
+  </label>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <label> Last Name
+    <%= f.text_field :last_name %>
+  </label>
+
+  <label> Password
+    <%= f.password_field :password %>
+  </label>
+
+  <label> Password Confirmation
+    <%= f.password_field :password_confirmation %>
+  </label>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
-
-<%= render "devise/shared/links" %>

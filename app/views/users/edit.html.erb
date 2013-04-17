@@ -1,0 +1,8 @@
+<%= form_for current_user do |f| %>
+  <p> 
+    <span class="name">My Status: </span> 
+    <%= f.select :status, User::STATUSES.keys %>    
+  </p>
+  <div><%= f.submit "Save" %></div>
+
+<% end %>

@@ -1,0 +1,60 @@
+#header {
+  width: 36.5384em;
+  margin: 50px auto;
+}
+
+#content {
+  width: 36.5384em;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.flash-msg {
+  padding: 10px;
+  color: #fff
+}
+.notice {
+  background: #58B028;
+}
+
+.alert {
+  background: #BF1E2E;
+}
+
+.styled-form {
+  width: 36.5384em;
+}
+
+.styled-form label {
+  display: block;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.styled-form label input {
+  width: 100%;
+  font-size: 1em;
+  line-height: 1;
+}
+.status {
+  display:inline-block;
+  text-align: center;
+  padding: 2px;
+  color: #FFF;
+  width: 50px;
+}
+
+.status-in {
+  background: #58B028;
+}
+
+.status-out {
+  background: #BF1E2E;
+}
+
+.name {
+  display: inline-block;
+  width: 200px;
+}

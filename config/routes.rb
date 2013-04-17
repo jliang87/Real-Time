@@ -2,7 +2,7 @@ ClioInOutStub::Application.routes.draw do
 
   devise_for :users
 
-  resources :users
+  resources :users, :only => [:index, :edit, :update]
 
   root :to => "users#index"
 
