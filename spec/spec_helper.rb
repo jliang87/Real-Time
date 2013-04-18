@@ -1,3 +1,9 @@
+require 'simplecov'
+SimpleCov.start 'rails' do
+  add_filter "/spec"
+  add_filter "/vendor"  
+end if ENV["COVERAGE"]
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
