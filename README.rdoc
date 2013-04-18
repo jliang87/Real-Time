@@ -1,1 +1,11 @@
+Security Issues:
 
+Javascript can be entered as part of the first/last name, and upon reload of the user, will execute it.
+
+Malcious JS can be entered as the website and executed
+
+Cross Site Request Forgery is not enabled. 
+
+
+
+Minor Visual Issue with the my status being slightly out of alignment with the others.

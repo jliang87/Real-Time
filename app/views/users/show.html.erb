@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td> Status: </td>
+    <td> <strong><%= @user.status %></strong> </td>
+  </tr>
+  <tr>
+    <td> Email: </td>
+    <td> <strong><%= @user.email %></strong> </td>
+  </tr>
+  <tr>
+    <td> Name: </td>
+    <td> <strong><%= @user.full_name %></strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <%= link_to "Web Site", @user.web_site %> </td>
+  </tr>
+</table>

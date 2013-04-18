@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :first_name, :last_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :first_name, :last_name, :web_site
 
   scope :without_user, lambda {|user| where("id <> :id", :id => user.id) }
 

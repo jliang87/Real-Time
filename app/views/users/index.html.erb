@@ -1,12 +1,25 @@
 <p> 
-  <span class="name">My Status: </span> 
-  <span class="status status-<%= current_user.status %>"> <%= current_user.status %> </span>
-  <%= link_to "Edit", edit_user_path(current_user) %>
+  <span class="name"> My status </span>
+  <span class="status status-<%=current_user.status%>"> <%= current_user.status %> </span>
+  <%= link_to("Edit", edit_user_path(current_user), :class => "update-link") %>
 </p>
 
-<% @users.each do |user| %>
-<p> 
-  <span class="name"><%= user.full_name %> </span> 
-  <span class="status status-<%= user.status %>"> <%= user.status %> </span>
-</p>
-<% end %>
+<div id="users-container">
+  <% @users.each do |user| %>
+    <p> 
+      <%= name_with_status(user.full_name, user.status, user.id) %>
+    </p>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $("#users-container a.update-link").click(function(){
+    var block = $(this).parent("p");
+    $.get($(this).attr("href"), function(data){
+      $("a.name", block).html(data["full_name"]);
+      $("span.status", block).removeClass("status-in status-out").
+        addClass("status-"+data["status"]).html(data["status"]);
+    });
+    return false;
+  });
+</script>

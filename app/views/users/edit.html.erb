@@ -1,8 +1,20 @@
-<%= form_for current_user do |f| %>
-  <p> 
-    <span class="name">My Status: </span> 
-    <%= f.select :status, User::STATUSES.keys %>    
-  </p>
+<%= form_for(current_user, :html => {:class => "styled-form"}) do |f| %>
+  <label class="styled-label"> My Status:     
+    <%= f.select :status, User::STATUSES.keys, {}, :class => "styled-input" %>    
+  </label>
+  <label class="styled-label"> Email
+    <%= f.text_field :email, :class => "styled-input" %>    
+  </label>
+  <label class="styled-label"> First Name
+    <%= f.text_field :first_name, :class => "styled-input" %>    
+  </label>
+  <label class="styled-label"> Last Name
+    <%= f.text_field :last_name, :class => "styled-input" %>    
+  </label>
+  <label class="styled-label"> Web Site
+    <%= f.text_field :web_site, :class => "styled-input" %>    
+  </label>
+
   <div><%= f.submit "Save" %></div>
 
 <% end %>

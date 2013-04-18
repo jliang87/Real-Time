@@ -58,3 +58,7 @@
   display: inline-block;
   width: 200px;
 }
+
+a.update-link {
+  margin-left: 20px;
+}
