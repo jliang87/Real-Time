@@ -2,16 +2,16 @@ Clio In and Out board skeleton:
 
 Features to Add:
 
-As a User, I would like the statuses to update in close to realtime without having to refresh the page or click the update link. (Testing JS)
+As a User, I would like the statuses to update in close to realtime without having to refresh the page or click the update link. 
 
-As a Design, I find the pages quite dull, I would like to have them styled better(Testing CSS)
+As a Design, I find the pages quite dull, I would like to have them styled better
 
-As a Team lead, I would like the app to support teams of users so I can better track the people I am responsible for.  (Testing Ruby/Rails.)
+As a Team lead, I would like the app to support teams of users so I can better track the people I am responsible for.
 
-As a Developer, I want to ensure this app have a good test coverage using Rspec. (Testing writing tests)
+As a Developer, I want to ensure this app have a good test coverage using Rspec.
 
 
-Additional Questions:
+Additional Questions To Be Answered:
 
 Notice that the IP addresses are stored as integers in the DB. Is this a better or worse approach from storing the IP addresses as string?
 
