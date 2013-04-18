@@ -6,9 +6,11 @@ As a User, I would like the statuses to update in close to realtime without havi
 
 As a Design, I find the pages quite dull, I would like to have them styled better
 
-As a Team lead, I would like the app to support teams of users so I can better track the people I am responsible for.
+As a Team lead, I would like the app to support teams of users so I can better track the people I am responsible for. 
+  A user can only belong to a single team
 
-As a Developer, I want to ensure this app have a good test coverage using Rspec.
+As a Developer, I want to ensure this app have a good test coverage using Rspec. These test should produce a reasonable test coverage report.
+(Use 'COVERAGE=true bundle exec rspec spec/' to generate the coverage report; The report is located at /coverage/index.html)
 
 
 Additional Questions To Be Answered:
