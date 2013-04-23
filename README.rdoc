@@ -2,24 +2,25 @@ Clio In and Out board skeleton:
 
 Features to Add:
 
-The statuses in the UI should update in close to realtime without having to refresh the page or click the update link. 
+* The statuses in the UI should update in close to realtime without having to refresh the page or click the update link. 
 
-The app should be able to support teams (such as Customer Service Reps, Salespeople) of users so team leads can better track the people they are responsible for. 
+* The app should be able to support teams (such as Customer Service Reps, Salespeople) of users so team leads can better track the people they are responsible for. 
   A user can only belong to a single team
 
-Ensure that the app have a good test coverage using Rspec. These test should produce a reasonable test coverage report.
+
+* Ensure that the app have a good test coverage using Rspec. These test should produce a reasonable test coverage report. 
   (Use 'COVERAGE=true bundle exec rspec spec/' to generate the coverage report; The report is located at /coverage/index.html)
 
-There is a migration (20130416230652_convert_string_ips_to_integers.rb that) that, if there existed data for those fields, would destroy it. 
-  Alter this migration to ensure that, if the database was full of data before the migration, that all data would still be intact afterwards.                                          
 
+* There is a migration (20130416230652_convert_string_ips_to_integers.rb that) that, if there existed data for those fields, would destroy it. 
+  Alter this migration to ensure that, if the database was full of data before the migration, that all data would still be intact afterwards.                                          
 
 Additional Questions To Be Answered:
 
-Notice that the IP addresses are stored as integers in the DB. 
+* Notice that the IP addresses are stored as integers in the DB.  
   What are the pros/cons of this approach of storing the IP addresses as string?
 
-Are there any security issues present within app/? 
+* Are there any security issues present within app/? 
   No need to mention security vulnerabilities within external gems.  
   List any security issues you found, and how to fix them. 
   Also list any potential security issues that you investigated that you believe the site to be free of. 
