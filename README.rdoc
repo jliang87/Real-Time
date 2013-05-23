@@ -2,7 +2,7 @@ Clio In and Out board skeleton:
 
 Features to Add:
 
-* The statuses in the UI should update in close to realtime without having to refresh the page or click the update link. 
+* The statuses in the UI should update using AJAX requests in close to realtime without having to refresh the page or click the update link. 
 
 * The app should be able to support teams (such as Customer Service Reps, Salespeople) of users so team leads can better track the people they are responsible for. 
   A user can only belong to a single team
@@ -15,7 +15,7 @@ Features to Add:
 * There is a migration (20130416230652_convert_string_ips_to_integers.rb that) that, if there existed data for those fields, would destroy it. 
   Alter this migration to ensure that, if the database was full of data before the migration, that all data would still be intact afterwards.                                          
 
-Additional Questions To Be Answered:
+Additional Questions To Be Answered (related to the code in this project):
 
 * Notice that the IP addresses are stored as integers in the DB.  
   What are the pros/cons of this approach of storing the IP addresses as string?
@@ -24,3 +24,82 @@ Additional Questions To Be Answered:
   No need to mention security vulnerabilities within external gems.  
   List any security issues you found, and how to fix them. 
   Also list any potential security issues that you investigated that you believe the site to be free of. 
+
+Additional Questions To Be Answered (unrelated to the code in this project):
+
+* Question 1
+  In most languages, this will fail:
+  if ((0.1 + 0.2) == 0.3)
+    # Do something here
+  end
+  Why?
+
+
+* Question 2
+  Generally, quicksort is more efficient than bubblesort. Under what
+  circumstances would you prefer bubblesort?
+
+
+* Question 3
+  Why might you denormalise your database?
+
+
+* Question 4
+  Which is the correct order, from fastest to slowest?
+    a. main memory, L1 cache, registers
+    b. L1 cache, main memory, registers
+    c. registers, L1 cache, main memory
+    d. registers, main memory, L1 cache
+
+
+* Question 5
+  How would you store passwords in your database, if you needed them to be secure even if hackers got access to the db?
+
+
+* Question 6
+  What would be the output of the following pseudocode?
+  
+  sum = 0
+    for (i = 0; i < 5; i += 1)
+      sum += i
+    end
+  puts i
+  puts sum
+
+
+* Question 7
+  What does the following code do?
+  
+  # value will always be an integer >= 0
+  def some_method(value)
+    if value == 0
+      return 0
+    else
+      return (value % 2) + some_method(value >> 1)
+    end
+  end
+
+
+* Question 8
+  You have database tables that look like this:
+  CREATE TABLE `users` (
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(128) NOT NULL,
+    PRIMARY KEY(id)
+  )
+   
+  CREATE TABLE `groups` (
+    id int NOT NULL AUTO_INCREMENT,
+    group_name varchar(128) NOT NULL,
+    PRIMARY KEY(id)
+  )
+   
+  CREATE TABLE `user_group_memberships` (
+    id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    group_id int NOT NULL
+  )
+   
+  Please write a query to determine, given a particular user's email address, what group ids and names do they belong to?
+  Please write an index that would improve the performance of that query.
+    CREATE INDEX index_name ON table_name (column_name, ...)
