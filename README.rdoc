@@ -42,7 +42,7 @@ Additional Questions To Be Answered (unrelated to the code in this project):
     d. registers, main memory, L1 cache
 
 
-5. How would you store passwords in your database, if you needed them to be secure even if hackers got access to the db?
+5. How would you store passwords in your database in such a way that they’d remain secure if the database were to be obtained by hackers?
 
 
 6. What would be the output of the following pseudocode?
