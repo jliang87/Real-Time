@@ -33,6 +33,7 @@ group :development, :test do
   gem 'faker'
   gem 'debugger'
   gem 'rspec-rails'
+  gem 'factory_girl'
   gem 'simplecov'
 end
 
