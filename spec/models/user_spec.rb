@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  let(:user) { User.new }
+  let(:user) { create(:user) }
 
   describe "#status=" do
     before do

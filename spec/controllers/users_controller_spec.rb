@@ -2,8 +2,7 @@ require 'spec_helper'
 
 describe UsersController do
 
-  let(:user) { User.create(:email => "testuser@goclio.com", :first_name => "Test", :last_name => "Person", 
-                           :password => 'testtest', :password_confirmation => 'testtest') }
+  let(:user) { create(:user) }
 
   before do
     sign_in user
