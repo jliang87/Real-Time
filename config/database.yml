@@ -3,7 +3,6 @@ development:
   database: clio_project_development
   host: localhost
   username: root
-  password: mysql5566
   
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -13,5 +12,4 @@ test:
   database: clio_project_test
   host: localhost
   username: root
-  password: mysql5566
   
