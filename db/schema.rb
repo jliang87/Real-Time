@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20130418175316) do
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.integer  "current_sign_in_ip"
-    t.integer  "last_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.integer  "status",                 :default => 0,  :null => false
