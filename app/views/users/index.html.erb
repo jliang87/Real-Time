@@ -1,8 +1,9 @@
 <p> 
   <span class="name"> My status </span>
   <span class="status status-<%=current_user.status%>" data-path="<%= status_user_path(current_user.id) %>" 
-    id="user-<%= current_user.id %>"> <%= current_user.status %> </span> <!-- added id and data-path to assist user.js.coffee
-    when the current user is user #1 and nothing gets ran when the id and path of user #1 isn't displayed -->
+    id="user-<%= current_user.id %>"> <%= current_user.status %> </span> 
+    <!-- added id and data-path to assist user.js.coffee when the current user is user #1 
+      and nothing gets ran when the id and path of user #1 isn't displayed -->
   <%= link_to("Edit", edit_user_path(current_user), :class => "update-link") %>
 </p>
 
