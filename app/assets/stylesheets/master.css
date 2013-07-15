@@ -59,6 +59,11 @@
   width: 200px;
 }
 
+.name2 {
+    display: inline-block;
+    width: 196px;
+}
+
 a.update-link {
   margin-left: 20px;
 }

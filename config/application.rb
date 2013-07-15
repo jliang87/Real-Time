@@ -59,4 +59,10 @@ module ClioInOutStub
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
+
+  TEAMS = ["Accounting", "Customer Service", "Sales", "Software Development", "Software Quality Assurance" ]
+  TEAMMABLE = {"Accounting" => "Accountant", "Customer Service" => "CustomerServiceRep", "Sales" => "Salesperson",
+               "Software Development" => "SoftwareDeveloper", "Software Quality Assurance" => "SoftwareTester"}
+  REVERSE_TEAMMABLE = {"Accountant" => "Accounting", "CustomerServiceRep" => "Customer Service", "Salesperson" => "Sales",
+               "SoftwareDeveloper" => "Software Development", "SoftwareTester" => "Software Quality Assurance"}
 end

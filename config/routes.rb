@@ -1,6 +1,6 @@
 ClioInOutStub::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: "signup"}
 
   resources :users, :only => [:index, :show, :edit, :update] do
     member do

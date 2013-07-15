@@ -23,5 +23,9 @@
     <%= f.password_field :password_confirmation, :class => "styled-input" %>
   </label>
 
+  <label class="styled-label"> Team
+    <%= f.select :team, ClioInOutStub::TEAMS, :class => "styled-input" %>
+  </label>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>

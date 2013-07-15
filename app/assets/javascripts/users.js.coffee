@@ -8,10 +8,10 @@
 		count = $('#users-container').data('count')
 
 		for i in [1..count]
-			$.get $('#user-'+i).data('path'), ((data) -> 
+			$.get $('#user-'+i).data('path'), ((data) ->
 				stat_pattern = /in|out/ 
-				id_pattern = /\d/
-
+				id_pattern = /\d+/
+				
 				stat_array = stat_pattern.exec(data) 
 				id_array = id_pattern.exec(data) 
 
@@ -19,7 +19,7 @@
 				id = id_array[0]  # need the id here for 'i' is already count+1 by the time the callbacks are ran
 
 				$("span.status", '#user-'+id).removeClass("status-in status-out").addClass("status-" + status).html status
-			), 'script' 
+			), 'script'
 			
 
 jQuery -> 

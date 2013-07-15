@@ -1,16 +1,25 @@
 <p> 
   <span class="name"> My status </span>
-  <span class="status status-<%=current_user.status%>" data-path="<%= status_user_path(current_user.id) %>" 
-    id="user-<%= current_user.id %>"> <%= current_user.status %> </span> 
-    <!-- added id and data-path to assist user.js.coffee when the current user is user #1 
+  <span class="name2" style="margin-left: -4px;">
+    <%= ClioInOutStub::REVERSE_TEAMMABLE[ current_user.teammable_type ] == nil ? "N/A" : ClioInOutStub::REVERSE_TEAMMABLE[ current_user.teammable_type ] %> </span>
+  <span data-path="<%= status_user_path(current_user.id) %>" id="user-<%= current_user.id %>">
+
+    <span class="status status-<%=current_user.status%>"> <%= current_user.status %> </span>
+
+    <!-- changed structure so that the status of the current user will also be updated automatically-->
+
+    <!-- added id and data-path to assist user.js.coffee when the current user is user #1
       and nothing gets ran when the id and path of user #1 isn't displayed -->
+
+  </span>
   <%= link_to("Edit", edit_user_path(current_user), :class => "update-link") %>
 </p>
 
 <div id="users-container" data-count="<%= @count %>">
   <% @users_without_current.each do |user| %>
-    <p id="user-<%= user.id %>" data-path="<%= status_user_path(user.id) %>"> 
-      <%= name_with_status(user.full_name, user.status, user.id) %>
+    <p id="user-<%= user.id %>" data-path="<%= status_user_path(user.id) %>">
+      <%= name_with_status(user.full_name, user.status, user.id,
+        ClioInOutStub::REVERSE_TEAMMABLE[ user.teammable_type ] == nil ? "N/A" : ClioInOutStub::REVERSE_TEAMMABLE[ user.teammable_type ]) %>
     </p>
   <% end %>
 </div>
