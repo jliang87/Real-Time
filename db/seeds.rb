@@ -4,7 +4,7 @@
               :last_name => Faker::Name.last_name,
               :password => "testtest",
               :password_confirmation => "testtest", 
-              :status => :out,
+              :status => :in,
               :teammable => ClioInOutStub::TEAMMABLE[ClioInOutStub::TEAMS[n%5]].constantize.create!)
 end
 

@@ -1,7 +1,7 @@
 @StatusPoller =
 	poll: (id)->
 		currentuserid = $('#CurrentUserID').data('id')
-		if id == currentuserid  # to enforce only one process runs, otherwise the recurring of poll() will multiply and crash the server
+		if id == currentuserid  # to enforce only one process runs, otherwise poll() will multiply and crash the server
 			setTimeout @request, 3000
 
 	request: ->
@@ -15,7 +15,7 @@
 				id_array = id_pattern.exec(data) 
 
 				status = stat_array[0] 
-				id = id_array[0]  # need the id here for 'i' is already count+1 by the time the callbacks are ran
+				id = id_array[0]  # need the id here because 'i' has long been changed by the time the callbacks are ran
 
 				$("span.status", '#user-'+id).removeClass("status-in status-out").addClass("status-" + status).html status
 			), 'script'

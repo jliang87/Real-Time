@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   STATUSES = {:in => 0, :out => 1}.freeze
 
   validates :status, :inclusion => {:in => STATUSES.keys }
+  validates :teammable_type, :inclusion => {:in => ClioInOutStub::REVERSE_TEAMMABLE.keys }
 
   def full_name
     [first_name, last_name].join(" ")
