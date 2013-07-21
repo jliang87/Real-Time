@@ -2,8 +2,6 @@ class UsersController < ApplicationController
 
   def index
     @users_without_current = User.without_user(current_user)
-    @users = User.all
-    @count = User.count
   end
 
   def status

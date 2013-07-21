@@ -1,11 +1,10 @@
-20.times do |n|
+10.times do |n|
   User.create(:email => "user#{n}@goclio.com", 
               :first_name => Faker::Name.first_name,
               :last_name => Faker::Name.last_name,
               :password => "testtest",
               :password_confirmation => "testtest", 
               :status => :out,
-              :teammable => ClioInOutStub::TEAMMABLE[ClioInOutStub::TEAMS.sample(1)[0]].constantize.create!)
-              
+              :teammable => ClioInOutStub::TEAMMABLE[ClioInOutStub::TEAMS[n%5]].constantize.create!)
 end
 

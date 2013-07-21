@@ -21,6 +21,8 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
   config.include FactoryGirl::Syntax::Methods
   config.include Capybara::DSL
+  require 'capybara/poltergeist'
+  Capybara.javascript_driver = :poltergeist
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
