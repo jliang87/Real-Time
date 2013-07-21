@@ -8,6 +8,6 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: clio
+  database: cliotest
   host: localhost
   pool: 5

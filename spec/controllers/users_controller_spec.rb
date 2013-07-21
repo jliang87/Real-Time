@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe UsersController do
 
-  let(:user) { create(:user) }
+  let(:user) { FactoryGirl.create(:user) }
 
   before do
     sign_in user
@@ -14,5 +14,5 @@ describe UsersController do
       expect(response).to render_template("index")
     end
   end
-  
+
 end

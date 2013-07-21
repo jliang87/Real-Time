@@ -10,6 +10,8 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'factory_girl', group: :test
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,8 +36,10 @@ group :development, :test do
   gem 'faker'
   gem 'debugger'
   gem 'rspec-rails'
-  gem 'factory_girl'
   gem 'simplecov'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
 end
 
 # To use ActiveModel has_secure_password
