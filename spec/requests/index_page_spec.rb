@@ -1,7 +1,53 @@
 require 'spec_helper'
 
+describe "Check user sign up and sign out" do
+  subject {page}
+  let(:email) {Faker::Internet.email}
+  let(:first_name) {Faker::Name.first_name}
+  let(:last_name) {Faker::Name.last_name}
+  let(:password) {"testtest"}
 
-describe "Check teams for user" do
+  before {visit root_path}
+  before do
+    click_link "Sign Up"
+    fill_in "Email", with: email
+    fill_in "First Name", with: first_name
+    fill_in "Last Name", with: last_name
+    fill_in "Password", with: password
+    fill_in "Password Confirmation", with: password
+  end
+
+  describe "Sign up as an software developer" do
+    before do
+      select('Software Development', from: 'Team')
+      click_button "Sign up"
+    end
+    it "Should see the correct UI content" do
+      should have_content('My status')
+      should have_css 'span.status-in', text: 'in'
+      should have_selector 'img'
+      should have_content('Software Development')
+      should have_content('Welcome! You have signed up successfully.')
+      should have_link('Edit')
+      should have_link('Sign Out')
+      should have_content('Signed in as ' + first_name + " " + last_name)
+    end
+
+    describe "Sign out user" do
+      before {click_link "Sign Out"}
+
+      it{ should have_content('You need to sign in or sign up before continuing.')}
+      it{ should have_content('Email')}
+      it{ should have_content('Password')}
+      it{ should have_content('Remember Me')}
+      it{ should have_link('Sign Up')}
+      it{ should have_link('Sign In')}
+      it{ should have_selector("input[type=submit][value='Sign in']")}
+    end
+  end
+end
+
+describe "Check user sign in" do
   subject {page}
 
   describe "Check accountant" do
@@ -88,7 +134,6 @@ describe "Check teams for user" do
 
     it {should have_content('Software Quality Assurance')}
   end
-
 end
 
 # can use launchy gem's save_and_open_page to open up webpage
@@ -149,20 +194,9 @@ describe "Check changing statuses" do
       should have_css '#user-'+ users[7].id.to_s + ' span.status-in', text: 'in'
     end
   end
-
 end
 
-#describe "Check user sign up" do
-#  subject {page}
-#
-#  before {visit root_path}
-#  before do
-#    fill_in "Email", with: email
-#    fill_in "Password", with: password
-#    click_button "Sign in"
-#  end
-#
-#end
+
 
 
 
