@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130714190249) do
+ActiveRecord::Schema.define(:version => 20130723061421) do
 
   create_table "accountants", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130714190249) do
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.integer  "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.integer  "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.integer  "status",                 :default => 0,  :null => false
