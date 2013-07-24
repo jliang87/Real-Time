@@ -9,4 +9,6 @@ For Clio
 
 3) All integration tests done using Capybara (spec/requests/index_page_spec.rb). Coverage include testing the above two features (requires PhantomJS on system) and user sign in, sign up, and sign out. 
 
+4) Due to that the original conversion migration won't work in PostgreSQL (Error: PG::Error: ERROR:  column "current_sign_in_ip" cannot be cast to type integer), the first thing that I've done was to edit the migration to make the conversion successful. To test the integrity of the data, I migrated the conversion for "last_sign_in_ip" when there're data present and validated that all data are intact.  
+
 
