@@ -13,7 +13,7 @@ For Clio
 
 Additional Questions:
 
-1) 
+The benefits of storing IP addresses in intergers rather than strings:
    - Uses less storage
    - Faster lookup (removes the need for full-text search)
    - More efficient indexing (integer indices are faster than string indices)
