@@ -11,4 +11,8 @@ For Clio
 
 4) Due to that the original conversion migration won't work in PostgreSQL (Error: PG::Error: ERROR:  column "current_sign_in_ip" cannot be cast to type integer), the first thing that I've done before working on the project was to edit the migration file to make the migration successful. To test the integrity of the data, I migrated the conversion for "last_sign_in_ip" when there're data present and validated that all data are intact.  
 
+Additional Questions:
 
+1) - Uses less storage
+   - Faster lookup (removes the need for full-text search)
+   - More efficient indexing (integer indices are faster than string indices)
