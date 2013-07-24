@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :status, :first_name, :last_name, :web_site,
-                  :team, :teammable  #:teammable is for seeds.rb and index_page_spec.rb
+                  :team, :teammable  #:teammable is for seeds.rb, index_page_spec.rb, and spec/factories/user.rb
   attr_accessor :team
 
 
