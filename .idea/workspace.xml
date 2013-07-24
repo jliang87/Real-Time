@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9cdf9f5d-a9c3-49c4-9232-02cc3f024f98" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.last_run.json" afterPath="$PROJECT_DIR$/coverage/.last_run.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.resultset.json" afterPath="$PROJECT_DIR$/coverage/.resultset.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index.html" afterPath="$PROJECT_DIR$/coverage/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130416230652_convert_string_ips_to_integers.rb" afterPath="$PROJECT_DIR$/db/migrate/20130416230652_convert_string_ips_to_integers.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="clio-in-out-stub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,34 +35,25 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1154" selection-end="1181" vertical-scroll-proportion="0.0">
+            <state line="27" column="27" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130723061421_convert_last_sign_in_ip_from_string_to_int.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130723061421_convert_last_sign_in_ip_from_string_to_int.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130416230652_convert_string_ips_to_integers.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20130416230652_convert_string_ips_to_integers.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130416230652_convert_string_ips_to_integers.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="41" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+            <state line="20" column="34" selection-start="511" selection-end="511" vertical-scroll-proportion="0.43814433">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_page_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index_page_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/requests/index_page_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="29" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.82051283">
+            <state line="32" column="29" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -948,27 +935,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130416225406_add_status_and_names_to_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="2" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.7371134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/signup_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="190" selection-end="190" vertical-scroll-proportion="0.10953608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="2" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
@@ -1018,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="86" selection-start="835" selection-end="835" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="51" selection-start="315" selection-end="315" vertical-scroll-proportion="0.25236169">
@@ -1032,30 +991,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1154" selection-end="1181" vertical-scroll-proportion="0.0">
+        <state line="13" column="86" selection-start="835" selection-end="835" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130723061421_convert_last_sign_in_ip_from_string_to_int.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130416230652_convert_string_ips_to_integers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="41" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+        <state line="17" column="19" selection-start="400" selection-end="400" vertical-scroll-proportion="0.3724227">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/requests/index_page_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.82051283">
+        <state line="32" column="29" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="622" selection-end="622" vertical-scroll-proportion="0.54768044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="37" selection-start="228" selection-end="228" vertical-scroll-proportion="0.20759837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="27" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130416230652_convert_string_ips_to_integers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="34" selection-start="511" selection-end="511" vertical-scroll-proportion="0.43814433">
           <folding />
         </state>
       </provider>
